@@ -1,36 +1,10 @@
-<<<<<<< HEAD
-# README
+# BT-TMDT-2 - *Simple Chat Application*
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-=======
-# BT-TMDT-2 - *Name of your app*
-
-**Name of your app** là một bài tập môn TMDT. Ứng dụng cho phép người dùng gửi tin nhắn (email) cho người dùng khác.
+**Simple Chat Application** là một bài tập môn TMDT. Ứng dụng cho phép người dùng gửi tin nhắn (email) cho người dùng khác.
 
 Thành viên:
-* [ ] **MSSV1** Tên sinh viên 1 (tên tài khoản github)
-* [ ] **MSSV2** Tên sinh viên 2 (tên tài khoản github)
+* [x] **1412067** Nguyễn Phú Cường (1412067)
+* [x] **1412073** Kiều Tài Danh (1412073)
 
 URL: **URL hosting của bài tập**
 
