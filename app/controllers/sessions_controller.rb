@@ -11,11 +11,13 @@ class SessionsController < ApplicationController
 		else
 			session[:current_user] = user
 			flash[:success] = "Login successfully."
-			redirect_to root_path 
+			redirect_to messages_path 
 		end
 	end
 
 	def delete
+		session.delete(:current_user)
+		redirect_to login_path
 	end
 
 	private

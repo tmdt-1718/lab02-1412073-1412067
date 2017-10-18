@@ -1,0 +1,10 @@
+<% @messages.each do |message| %>
+	<div class="col-md-4 pb-3">
+		<div class="card">
+			<div class="card-body">
+				<h4 class="card-title"><%= message.user.id %>&nbsp<%= message.user.name %></h4>
+				<p class="card-text"><%= truncate(message.text, :length=> 100) %></p>
+			</div>
+		</div>
+	</div>
+<% end %>	
