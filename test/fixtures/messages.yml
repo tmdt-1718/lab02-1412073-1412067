@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  text: MyText
+  image: MyString
+  receiver: 1
+  ispending: false
+  isread: false
+  time_read: 2017-10-18 08:49:09
+  user: one
+
+two:
+  text: MyText
+  image: MyString
+  receiver: 1
+  ispending: false
+  isread: false
+  time_read: 2017-10-18 08:49:09
+  user: two
