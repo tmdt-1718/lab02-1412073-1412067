@@ -8,10 +8,10 @@ services:
       - 3000:3000
     container_name: lab02
     links:
-      - lab02_db
+      - db
     command: sh /lab02/scripts/startup.sh
     env_file: .env
-  lab02_db:
+  db:
     image: postgres
-    container_name: lab02_db
+    container_name: db
     env_file: .env

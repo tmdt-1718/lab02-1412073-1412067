@@ -203,10 +203,7 @@ DEPENDENCIES
   selenium-webdriver
   spring
   spring-watcher-listen (~> 2.0.0)
-<<<<<<< HEAD
-=======
   sprockets-rails
->>>>>>> fc91a2339e9a455788783a7d8dbf329e00988c40
   turbolinks (~> 5)
   tzinfo-data
   uglifier (>= 1.3.0)
