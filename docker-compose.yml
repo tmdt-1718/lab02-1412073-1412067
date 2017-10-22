@@ -1,15 +1,15 @@
 version: '3'
 services:
-  webapp:
+  lab02:
     build: .
     volumes:
-      - .:/webapp
+      - .:/lab02
     ports:
       - 3000:3000
-    container_name: webapp
+    container_name: lab02
     links:
       - db
-    command: sh /webapp/scripts/startup.sh
+    command: sh /lab02/scripts/startup.sh
     env_file: .env
   db:
     image: postgres
