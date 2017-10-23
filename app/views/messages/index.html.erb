@@ -1,22 +1,14 @@
 <div class="container">
 	<div class="row">
-
-		<div class="col-md-12 ">
+		<div class="col-md-12 pb-3">
 			<h2 class="text-center pb-3">Received Messages</h2>
 			<i><%= link_to 'Compose', new_message_path, :class => "btn btn-success" %></i>
-			<%= link_to 'Friend List', '/', :class => "btn btn-info" %>
-			<%= link_to 'Sent Message', sent_messages_path, :class => "btn btn-info" %>
+			<%= link_to 'Sent Message', messages_path(:send => 1), :class => "btn btn-info" %>
+			<%= link_to 'Received Message', messages_path, :class => "btn btn-info" %>
+			<%= link_to 'Friend List', user_path(@current_user["id"]), :class => "btn btn-info" %>
+			<%= link_to 'User List', users_path, :class => "btn btn-info" %>
 			</br>
 		</div>
 		<%= render 'show_messages' %>
-		<% for user in User.all %>
-			<div class="user">
-			    <p>
-			      <strong><%=h user.name %></strong>
-			      <%= link_to "Add Friend", friendships_path(:friend_id => user), :method => :post %>
-			      <div class="clear"></div>
-			    </p>
-			</div>
-		<% end %>
 	</div>
 </div>

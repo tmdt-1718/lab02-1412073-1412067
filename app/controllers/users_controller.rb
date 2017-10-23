@@ -3,6 +3,15 @@ class UsersController < ApplicationController
 	def new
 	end
 
+	def index
+		@users = User.where("id != #{current_user["id"]}")
+	end
+
+
+	def show
+		@user = User.find(current_user["id"])
+	end
+
 	def create
 		user = User.create(user_params)
 
@@ -11,20 +20,12 @@ class UsersController < ApplicationController
 			redirect_to messages_path 
 		else
 			flash[:error] = "Cannot create new account."
-			render new
+			render 'new'
 		end
-	end
-
-	def add_friend
-    
-	end
-  
-	def remove_friend
-    
 	end
 
 	private
 	def user_params
-		params.require(:user).permit(:email, :password)
+		params.require(:user).permit(:name, :email, :password)
 	end
 end

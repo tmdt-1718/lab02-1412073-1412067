@@ -7,7 +7,7 @@ class SessionsController < ApplicationController
 
 		if user.nil?
 			flash[:error] = "Wrong email or password."
-			render new
+			render 'new'
 		else
 			session[:current_user] = user
 			flash[:success] = "Login successfully."

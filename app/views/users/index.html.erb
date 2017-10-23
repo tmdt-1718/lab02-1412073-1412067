@@ -1,0 +1,12 @@
+<div class="container">
+	<div class="row">
+		<div class="col-md-12 pb-3">
+			<% @users.each do |user| %>
+				<div class="row">
+					<strong><%= user.name %>&nbsp</strong>
+					<%= button_to "Add Friend", friendships_path(:friend_id => user), :class => "btn btn-primary" %> 
+				</div>
+				<% end %>
+		</div>
+	</div>
+</div>
