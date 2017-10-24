@@ -1,8 +1,9 @@
 <div class="container">
 	<div class="row">
 		<div class="col-md-12">
-			<h2 class="text-center">Sent Messages</h2>
+			<h2 class="text-center"><%= @message.user.name %></h2>
+			<p><%= @message.text %></p>
+			<p>Read: <%= @message.time_read %></p>
 		</div>
-		<%= render 'show_messages' %>
 	</div>
 </div>

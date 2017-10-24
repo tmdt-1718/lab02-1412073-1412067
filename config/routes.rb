@@ -1,6 +1,4 @@
 Rails.application.routes.draw do
-  get 'send_messages', to: 'send_messages#index', :as => 'sent_messages'
-
 	root 'messages#index'
 	
 	get '/login', to: 'sessions#new'

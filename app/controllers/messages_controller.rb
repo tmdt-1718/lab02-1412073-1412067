@@ -12,14 +12,16 @@ class MessagesController < ApplicationController
 	end
 
 	def show
+		@message = Message.find(params[:id])
+		@message.update_attribute(:time_read, DateTime.now)
+		@message.update_attribute(:isread, true)
 	end
 
 	def new
-		@message = Message.new
+		@friends = User.where(id: Friendship.where("user_id = #{current_user["id"]}").pluck(:friend_id))
 	end
 
 	def create
-		#check if receiver exist or not
 		current_user = User.find(session[:current_user]["id"])	
 		@message = current_user.messages.create(message_params)
 		redirect_to messages_path
@@ -27,6 +29,6 @@ class MessagesController < ApplicationController
 	
 	private
 		def message_params
-			params.require(:message).permit(:receiver, :text)
+			params.permit(:receiver, :text)
 		end
 end

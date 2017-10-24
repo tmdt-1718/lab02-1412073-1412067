@@ -12,7 +12,9 @@
 			<li class="nav-item"><a class="nav-link" href="/">Message</a></li>
 			</li>
 			<li class="nav-item"><a class="nav-link" href="/">About</a></li>
+		</ul>
 
+		<ul class="nav ml-auto">
 			<% if session[:current_user] %>
 				<li class="nav-item"><a class="nav-link"><%= session[:current_user]["id"] %></a></li>
 				<li class="nav-item"><a class="nav-link"><%= session[:current_user]["name"] %></a></li>

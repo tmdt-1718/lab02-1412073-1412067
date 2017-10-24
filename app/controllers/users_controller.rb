@@ -4,7 +4,7 @@ class UsersController < ApplicationController
 	end
 
 	def index
-		@users = User.where("id != #{current_user["id"]}")
+		@users = User.where.not(id: Friendship.where("user_id = #{current_user["id"]}").pluck(:friend_id))
 	end
 
 
