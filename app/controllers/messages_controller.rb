@@ -13,8 +13,11 @@ class MessagesController < ApplicationController
 
 	def show
 		@message = Message.find(params[:id])
-		@message.update_attribute(:time_read, DateTime.now)
+		#if !@message.isread
+		Time.zone = 'Hanoi'
+		@message.update_attribute(:time_read, Time.current)
 		@message.update_attribute(:isread, true)
+	#	end
 	end
 
 	def new

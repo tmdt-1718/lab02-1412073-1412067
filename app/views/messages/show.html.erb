@@ -3,7 +3,7 @@
 		<div class="col-md-12">
 			<h2 class="text-center"><%= @message.user.name %></h2>
 			<p><%= @message.text %></p>
-			<p>Read: <%= @message.time_read %></p>
+			<p>Read: <%= @message.time_read.strftime('%H:%M:%S %d-%m-%Y') %></p>
 		</div>
 	</div>
 </div>
