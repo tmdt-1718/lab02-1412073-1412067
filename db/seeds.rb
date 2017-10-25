@@ -7,7 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 User.destroy_all
-
+Message.destroy_all
 user1 = User.create!(name: Faker::Name.name, email: 'cuongkb1g', password: 'cuongkb3g')
 user2 = User.create!(name: Faker::Name.name, email: 'cuongkb2g', password: 'cuongkb3g')
 user3 = User.create!(name: Faker::Name.name, email: 'cuongkb3g', password: 'cuongkb3g')
