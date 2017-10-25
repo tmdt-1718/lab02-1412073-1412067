@@ -29,7 +29,7 @@ class MessagesController < ApplicationController
 	def create
 		current_user = User.find(session[:current_user]["id"])	
 		@message = current_user.messages.new(message_params)
-
+		byebug
 		if @message.save
 			@message.update_attribute(:isread, true)
 			flash[:success] = "Sent message to #{User.find(@message.receiver).name}."
@@ -43,6 +43,6 @@ class MessagesController < ApplicationController
 	
 	private
 		def message_params
-			params.require(:message).permit(:receiver, :text)
+			params.require(:message).permit(:receiver, :text, :image)
 		end
 end

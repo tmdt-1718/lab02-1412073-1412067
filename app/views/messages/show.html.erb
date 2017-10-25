@@ -4,10 +4,12 @@
 			<% if @message.user_id == session[:current_user]["id"] %>
 				<p>to:#<%= User.find(@message.receiver).name %></p>
 				<p><%= @message.text %></p>
+				<%= image_tag @message.image.url unless @message.image.blank? %>
 				<p>Sent: <%= @message.created_at.strftime('%H:%M:%S %d-%m-%Y') %></p>
 			<% else %>
 				<p>from:#<%= @message.user.name %></p>
 				<p><%= @message.text %></p>
+				<%= image_tag @message.image.url unless @message.image.blank? %>
 				<p>Read: <%= @message.time_read.strftime('%H:%M:%S %d-%m-%Y') %></p>
 			<% end %>
 		</div>
