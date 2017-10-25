@@ -22,16 +22,17 @@ class MessagesController < ApplicationController
 	end
 
 	def new
-		@friends = User.where.not(id: Friendship.where("user_id = #{current_user["id"]}").pluck(:friend_id)).where.not(id: current_user["id"])
+		@message = Message.new
+		@friends = User.where(id: Friendship.where("user_id = #{current_user["id"]}").pluck(:friend_id))
 	end
 
 	def create
 		current_user = User.find(session[:current_user]["id"])	
-		@message = current_user.messages.create(message_params)
+		@message = current_user.messages.new(message_params)
 
-		if @message
+		if @message.save
 			@message.update_attribute(:isread, true)
-			flash[:success] = "Sent message to #{@message.user.name}."
+			flash[:success] = "Sent message to #{User.find(@message.receiver).name}."
 			redirect_to messages_path
 		else
 			flash[:error] = "Cannot send message."
@@ -42,6 +43,6 @@ class MessagesController < ApplicationController
 	
 	private
 		def message_params
-			params.permit(:receiver, :text)
+			params.require(:message).permit(:receiver, :text)
 		end
 end
