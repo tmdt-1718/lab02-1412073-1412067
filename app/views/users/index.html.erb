@@ -1,7 +1,7 @@
 <div class="container">
 	<% if flash[:success] != nil %>
 	<div class="row">
-		<div class="col-md-12 pb-3">
+		<div class="col-md-12 pb-3 pt-3">
 			<div class="alert alert-success alert-dismissible fade show" role="alert">
 				<%= flash[:success] %>
 				<button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -13,12 +13,16 @@
 	<% end %>
 	<div class="row">
 		<div class="col-md-12 pb-3">
-			<% @users.each do |user| %>
-				<div class="row">
-					<strong><%= user.name %>&nbsp</strong>
-					<%= button_to "Add Friend", friendships_path(:friend_id => user), :class => "btn btn-primary" %> 
-				</div>
-				<% end %>
+			<h1 class="text-center text-info pt-1 pb-3">USER LIST</h1>
+			<div class="row">
+				<% @users.each do |user| %>
+					<div class="col-md-4 text-center">
+						<strong><%= user.name %></strong>
+						<%= button_to "Add Friend", friendships_path(:friend_id => user), :form_class => "pt-1", :class => "btn btn-primary" %> 
+					</div>
+				<% end %>	
+			</div>
+			
 		</div>
 	</div>
 </div>

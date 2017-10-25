@@ -1,15 +1,36 @@
 <div class="container">
 	<div class="row">
 		<div class="col-md-12">
-			<% if @message.user_id == session[:current_user]["id"] %>
-				<p>to:#<%= User.find(@message.receiver).name %></p>
-				<p><%= @message.text %></p>
-				<p>Sent: <%= @message.created_at.strftime('%H:%M:%S %d-%m-%Y') %></p>
-			<% else %>
-				<p>from:#<%= @message.user.name %></p>
-				<p><%= @message.text %></p>
-				<p>Read: <%= @message.time_read.strftime('%H:%M:%S %d-%m-%Y') %></p>
-			<% end %>
+			<form>
+				<% if @message.user_id == session[:current_user]["id"] %>
+					<div class="form-group">
+						<label>To</label>
+						<input class="form-control" type="text" placeholder="<%= User.find(@message.receiver).name %>" readonly>
+					</div>
+					<div class="form-group">
+						<label>Content</label>
+						<textarea class="form-control" readonly><%= @message.text %></textarea>
+					</div>
+					<div class="form-group">
+						<label>Sent Time</label>
+						<input class="form-control" type="text" placeholder="<%= @message.created_at.strftime('%H:%M:%S %d-%m-%Y') %>" readonly>
+					</div>
+				<% else %>
+					<div class="form-group">
+						<label>From</label>
+						<input class="form-control" type="text" placeholder="<%= @message.user.name %>" readonly>
+					</div>
+					<div class="form-group">
+						<label>Content</label>
+						<textarea class="form-control" readonly><%= @message.text %></textarea>
+					</div>
+					<div class="form-group">
+						<label>Read Time</label>
+						<input class="form-control" type="text" placeholder="<%= @message.time_read.strftime('%H:%M:%S %d-%m-%Y') %>" readonly>
+					</div>
+				<% end %>
+			</form>
+			
 		</div>
 	</div>
 </div>
