@@ -47,7 +47,8 @@ Liệt kê các **yêu cầu nâng cao** đã thực hiện:
 Link ảnh GIF demo ứng dụng:
 
 1. Đăng kí, đăng nhập, hiển thị tin nhắn:
-![](https://media.giphy.com/media/xT9IgN8xU66F5y1xIs/giphy.gif)
+
+![ALT ENTER](https://media.giphy.com/media/xT9IgN8xU66F5y1xIs/giphy.gif)
 
 2. Xem tin nhắn, bạn bè, kết bạn, xóa bạn:
 ![](https://media.giphy.com/media/3o7aD1yfn3pudVXHSE/giphy.gif)
