@@ -1,13 +1,30 @@
 <div class="container">
+	<% if flash[:success] != nil %>
 	<div class="row">
 		<div class="col-md-12 pb-3">
-			<h2 class="text-center pb-3">Received Messages</h2>
+			<div class="alert alert-success alert-dismissible fade show" role="alert">
+				<%= flash[:success] %>
+				<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+		</div>
+	</div>
+	<% end %>
+	<div class="row">
+		<div class="col-md-12 pb-3">
 			<i><%= link_to 'Compose', new_message_path, :class => "btn btn-success" %></i>
 			<%= link_to 'Sent Message', messages_path(:send => 1), :class => "btn btn-info" %>
 			<%= link_to 'Received Message', messages_path, :class => "btn btn-info" %>
 			<%= link_to 'Friend List', user_path(@current_user["id"]), :class => "btn btn-info" %>
 			<%= link_to 'User List', users_path, :class => "btn btn-info" %>
-			</br>
+
+			<% if params[:send] %>
+				<h3>Sent Messages</h3>
+			<% else %>
+				<h3>Received Messages</h3>
+			<% end %>
+
 		</div>
 		<%= render 'show_messages' %>
 	</div>

@@ -5,10 +5,10 @@ class FriendshipsController < ApplicationController
 		@friendship = user.friendships.create(user_id: user.id, friend_id: params[:friend_id])
 
 		if @friendship 
-			flash[:success] = "Added friend."
+			flash[:success] = "Added #{@friendship.friend.name} as a new friend."
 			redirect_to users_path
 		else
-			flash[:error] = "Unable to add friend."
+			flash[:error] = "Unable to add user #{@friendship.friend.name}."
 			redirect_to messages_path
 		end
 
