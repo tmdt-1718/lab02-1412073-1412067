@@ -1,11 +1,15 @@
 <div class="container">
 	<div class="row">
 		<div class="col-md-12">
-			<% for friendship in @user.friendships %>
-				<div class="row"><%= friendship.friend.name %>&nbsp
-					<%= button_to "Remove", friendship_path(friendship), method: :delete, :class => "btn btn-danger" %>
-				</div>
-			<% end %>
+			<h1 class="text-center text-info pt-1 pb-3">FRIEND LIST</h1>
+			<div class="row">
+				<% for friendship in @user.friendships %>
+					<div class="col-md-4 text-center">
+						<%= friendship.friend.name %>
+						<%= button_to "Remove", friendship_path(friendship), method: :delete, :class => "btn btn-danger" %>
+					</div>
+				<% end %>	
+			</div>
 		</div>
 	</div>
 </div>
