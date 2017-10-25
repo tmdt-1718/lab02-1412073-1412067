@@ -6,7 +6,7 @@ Thành viên:
 * [x] **1412067** Nguyễn Phú Cường (1412067)
 * [x] **1412073** Kiều Tài Danh (1412073)
 
-URL: **URL hosting của bài tập**
+URL: **https://tmdt-lab02-1412067-1412073.herokuapp.com/**
 
 ## Yêu cầu
 
@@ -27,7 +27,7 @@ Yêu cầu **bắt buộc**
 * [x] Người dùng chỉ có thể đọc tin nhắn khi họ nằm trong danh sách người nhận. ()
 
 Yêu cầu **không bắt buộc**:
-* [ ] Người dùng có thể gửi hình ảnh đính kèm theo thông điệp. (**MSSV**)
+* [x] Người dùng có thể gửi hình ảnh đính kèm theo thông điệp. ()
 * [ ] Người dùng có thể gửi tin nhắn đến nhiều người dùng cùng lúc. (**MSSV**)
 * [ ] Người dùng có thể đăng nhập với Facebook. (**MSSV**)
 * [ ] Người dùng có thể block người khác. Sau khi block, người dùng sẽ không nhận được tin nhắn từ người bị block gửi nữa. (**MSSV**)
@@ -39,16 +39,19 @@ Yêu cầu **không bắt buộc**:
 * [ ] Người dùng có thể gửi tin nhắn cho người dùng ngoài hệ thống. Khi đó, người nhận sẽ nhận được 1 email chứa link đăng ký tài khoản. Sau khi đăng ký tài khoản, họ có thể xem tin nhắn đã nhận. (**MSSV**)
 
 Liệt kê các **yêu cầu nâng cao** đã thực hiện:
-* [ ] Chức năng 1
-* [ ] Chức năng 2
+* [x] Người dùng có thể xóa người dùng khác ra khỏi danh sách bạn. ()
+* [x] Người dùng có thể gửi hình ảnh đính kèm theo thông điệp. ()
 
 ## Demo
 
 Link ảnh GIF demo ứng dụng:
 
-![Video Walkthrough](demo.gif)
+1. Đăng kí, đăng nhập, hiển thị tin nhắn:
+![](https://media.giphy.com/media/xT9IgN8xU66F5y1xIs/giphy.gif)
 
-Tạo ảnh GIF với chương trình [LiceCap](http://www.cockos.com/licecap/).
+2. Xem tin nhắn, bạn bè, kết bạn, xóa bạn:
+![](https://media.giphy.com/media/3o7aD1yfn3pudVXHSE/giphy.gif)
+3. Gửi tin nhắn, đính kèm ảnh:
 
 
 ## License
